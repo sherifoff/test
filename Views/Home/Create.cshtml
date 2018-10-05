@@ -1,0 +1,65 @@
+﻿@model RealEstate.Models.EstateItemViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "_Layout";
+}
+<form class="container elan" method="post" asp-action="Create" enctype="multipart/form-data">
+
+    <label asp-for="Price">
+        Price:
+        <input asp-for="Price" />
+    </label>
+    <br />
+
+    <label>
+        Currency
+        <select class="btnselect" asp-for="CurrencyId"
+                asp-items="@(new SelectList(Model.CurrencyList, "Id", "Name"))">
+            <option>Select Currency</option>
+        </select>
+    </label>
+    <br />
+
+    <label>
+        Property
+        <select asp-for="PropertyId"
+                class="btnselect" asp-items="@(new SelectList(Model.PropertyList, "Id", "Name"))">
+            <option>Select Property</option>
+        </select>
+    </label>
+    <br />
+
+
+    <label>
+        HouseType
+        <select asp-for="HouseTypeId"
+                class="btnselect" asp-items="@(new SelectList(Model.HouseTypeList, "Id", "Name"))">
+            <option>Select HouseType</option>
+        </select>
+    </label>
+    <br />
+
+    <label asp-for="Location">
+        Location:
+        <input asp-for="Location" />
+    </label>
+    <br />
+
+    <label asp-for="Details">
+        Details:
+        <input asp-for="Details" />
+    </label>
+    <br />
+
+
+    <input type="file" asp-for="ImageUploaded" />
+    <br />
+
+    <br />
+    <button type="submit" class="button" onclick="alert('Yeni elan əlavə edildi')">Create</button>
+    <button type="submit" asp-action="Index" class="button">Cancel</button>
+
+
+    @*<a class="button" asp-action="Index">Cancel</a>*@
+
+</form>

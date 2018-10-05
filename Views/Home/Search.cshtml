@@ -1,0 +1,71 @@
+﻿@model EstateItemListViewModel
+
+@{
+    ViewBag.Title = "EstateItems";
+    Layout = "_Layout";
+}
+
+
+<div class="container" asp-action="Search" method="post" enctype="multipart/form-data">
+
+
+    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+    {
+        <b>Search for</b>
+
+        @*<br />
+            @Html.RadioButton("searchBy", "Location", true) <text> Location </text>*@
+
+
+        <br />
+        <label> Location</label>
+        @Html.TextBox("search", null, new { @class = "btnselect" })
+
+        <br />
+        <label> Price</label>
+        @Html.TextBox("price", null, new { @class = "btnselect" })
+
+        <br />
+        <label> HouseType</label>
+        @Html.TextBox("housetype", null, new { @class = "btnselect" })
+
+        <br />
+        <label> Property</label>
+        @Html.TextBox("property", null, new { @class = "btnselect" })
+
+        <br />
+        <label> Currency</label>
+        @Html.TextBox("currency", null, new { @class = "btnselect" })
+
+
+        <br />
+        <br />
+        <input type="submit" class="button" value="Search" />
+    }
+</div>
+
+
+
+@*<label>
+        Currency
+        <select class="btnselect" asp-for="CurrencyId"
+                asp-items="@(new SelectList(Model.CurrencyList, "Id", "Name"))"></select>
+    </label>
+    <br />*@
+
+
+<br />
+
+<div class="container">
+
+    @foreach (var estate in Model.EstateItems)
+    {
+        @await Component.InvokeAsync("RealEstate", estate)
+    }
+</div>
+
+
+
+
+
+

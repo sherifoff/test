@@ -1,0 +1,99 @@
+﻿@using System.Security.Claims
+
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RealEstate</title>
+    <link href="~/assets/css/all.css" rel="stylesheet">
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet">
+
+    <title>@ViewBag.Title</title>
+    <style>
+        .input-validation-error {
+            border-color: red;
+            background-color: #fee;
+        }
+    </style>
+</head>
+
+
+<body class="m-1 p-1">
+
+
+    <div class="header">
+        @if (IsSectionDefined("Header"))
+        {
+            @RenderSection("Header")
+        }
+        else
+        {
+            @Html.Partial("_Header")
+        }
+    </div>
+
+    <div>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <div>@UserManager.GetUserName(User)</div>
+            <form method="post" asp-controller="Account" asp-action="Logout">
+                <input type="submit" value="Logout" />
+            </form>
+        }
+        else
+        {
+            <a asp-controller="Account" asp-action="Login">Login</a>
+            <a asp-controller="Account" asp-action="Register">Register</a>
+        }
+    </div>
+
+    <div class="row m-1 p-1">
+        <div class="col-9">
+            @RenderBody()
+        </div>
+    </div>
+
+
+
+
+    <br />
+    <div>
+        @if (IsSectionDefined("Body"))
+        {
+            @RenderSection("Body")
+        }
+    </div>
+    <br />
+
+    <div class="bg-transparent">
+    </div>
+    <br />
+
+
+    <div class="footer">
+        @if (IsSectionDefined("Footer"))
+        {
+            @RenderSection("Footer")
+        }
+        else
+        {
+            @Html.Partial("_Footer")
+        }
+    </div>
+
+
+
+    @RenderSection("scripts", required: false)
+
+    <div class="bg-info">
+
+    </div>
+</body>
+</html>

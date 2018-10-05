@@ -1,0 +1,24 @@
+﻿@model EstateItemViewModel
+
+
+<a href="/Home/Details?ID=@Model.Id">
+<div class="item row">
+    <div class="col">
+        <div class="top">
+            <div class="top-text">@Model.Property / @Model.Price  @Model.Currency </div>
+        </div>
+        <img src="/Home/Get?path=@Model.Image"             
+             class="img-thumbnail img"
+             alt="Home Image">
+        <div class="bottom">
+            <b> @Model.HouseType</b>
+            <br>
+            @Model.Location
+        </div>
+    </div>
+</div>
+</a>
+
+
+
+

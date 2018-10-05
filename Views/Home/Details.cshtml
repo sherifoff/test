@@ -1,0 +1,41 @@
+﻿@model EstateItemViewModel
+
+<html>
+<head>
+    <title>@Model.Id</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Qiyməti: @Model.Price  - @Model.Currency</h1>
+        <h1>Yer: @Model.Location</h1>
+
+        <h1>Özəlliyi: @Model.Property</h1>
+        <h1>Ev tipi: @Model.HouseType</h1>
+
+        <img src="/Home/Get?path=@Model.Image" width="500" height="333">
+
+        <h1>Ətarflı məlumat: @Model.Details</h1>
+
+
+        <div>Id: @Model.Id</div>
+
+        <div>
+            @Html.ActionLink("Home", "Index")
+        </div>
+
+
+        <br />
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+        
+        <br />
+        <form asp-action="Delete" method="post">
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <button class="button" type="submit">Delete</button>
+        </form>
+        
+
+    </div>
+</body>
+</html>

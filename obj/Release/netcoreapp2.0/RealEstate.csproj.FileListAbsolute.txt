@@ -1,0 +1,12 @@
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\bin\Release\netcoreapp2.0\RealEstate.deps.json
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\bin\Release\netcoreapp2.0\RealEstate.runtimeconfig.json
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\bin\Release\netcoreapp2.0\RealEstate.runtimeconfig.dev.json
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\bin\Release\netcoreapp2.0\RealEstate.dll
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\bin\Release\netcoreapp2.0\RealEstate.pdb
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\obj\Release\netcoreapp2.0\RealEstate.csprojAssemblyReference.cache
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\obj\Release\netcoreapp2.0\RealEstate.csproj.CoreCompileInputs.cache
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\obj\Release\netcoreapp2.0\RealEstate.AssemblyInfoInputs.cache
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\obj\Release\netcoreapp2.0\RealEstate.AssemblyInfo.cs
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\obj\Release\netcoreapp2.0\RealEstate.dll
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\obj\Release\netcoreapp2.0\RealEstate.pdb
+E:\Users\Admini\Desktop\Intern\RealEstate\RealEstate\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs

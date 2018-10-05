@@ -1,0 +1,22 @@
+﻿@model RealEstate.Models.ViewModels.EstateItemListViewModel
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<div class="container">
+@foreach (var estateItem in Model.EstateItems)
+{
+
+    @await Component.InvokeAsync("RealEstate", estateItem)
+
+}
+    </div>
+<br />
+
+
+<div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+     page-class="button" page-class-normal="btn-secondary"
+     page-class-selected="btn-primary"
+     class="btn-group pull-right m-1 container">
+</div>
